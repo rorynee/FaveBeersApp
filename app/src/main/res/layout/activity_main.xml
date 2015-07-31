@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainText_id"
+        android:text="@string/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/count_id"
+        android:text="@string/numofbeer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="10sp"
+        android:layout_above="@+id/hr1_id"
+        android:layout_alignRight="@+id/by_id"
+        android:layout_alignEnd="@+id/by_id" />
+
+    <View
+        android:id="@+id/hr1_id"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_below="@+id/mainText_id"/>
+
+    <RelativeLayout
+        android:id="@+id/fragArea_id"
+        android:layout_width="256dp"
+        android:layout_height="320dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/white"
+        android:layout_below="@+id/hr1_id">
+
+
+        <ImageView
+            android:layout_width="256dp"
+            android:layout_height="256dp"
+            android:id="@+id/beer_pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/imageText_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/beer_pic"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"/>
+
+
+
+    </RelativeLayout>
+
+
+
+    <View
+        android:id="@+id/hr2_id"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_below="@+id/fragArea_id"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/by_id"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bigbeericon"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/hr2_id"
+        android:layout_alignRight="@+id/hr2_id"
+        android:layout_alignEnd="@+id/hr2_id"
+        android:padding="10dp"
+        android:contentDescription="@string/yes"
+        android:layout_marginRight="40dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/nobeer"
+        android:contentDescription="@string/no"
+        android:id="@+id/bn_id"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/hr2_id"
+        android:layout_marginLeft="40dp"/>
+
+</RelativeLayout>
